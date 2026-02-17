@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para mi amor ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(
+            rgba(255, 95, 158, 0.75),
+            rgba(255, 140, 207, 0.75)
+        ),
+        url("fondo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 2.8em;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+/* 🎠 Carrusel */
+.carrusel {
+    position: relative;
+    width: 90%;
+    max-width: 360px;
+    height: 460px;
+    margin: 35px auto;
+    overflow: hidden;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.carrusel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+/* 💌 Botón */
+.boton-carta {
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4f8b;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+}
+
+.boton-carta:hover {
+    transform: scale(1.05);
+}
+
+/* 📜 Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.carta {
+    background: #fff;
+    color: #333;
+    max-width: 520px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: left;
+    animation: aparecer 0.5s ease;
+}
+
+.carta h2 {
+    text-align: center;
+    color: #ff4f8b;
+}
+
+.carta p {
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+.cerrar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cerrar button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #ff4f8b;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* ❤️ Corazones */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: rgba(255,255,255,0.8);
+    animation: flotar linear infinite;
+    pointer-events: none;
+}
+
+@keyframes flotar {
+    from { transform: translateY(0); opacity: 1; }
+    to   { transform: translateY(-110vh); opacity: 0; }
+}
+
+footer {
+    margin: 30px 0;
+    font-size: 1.2em;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💖 Feliz Aniversario 💖</h1>
+<p>Gracias por cada momento juntos 💕</p>
+
+<div class="carrusel">
+    <img src="foto1.jpg">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
+    <!-- agregá todas las fotos que quieras -->
+</div>
+
+<button class="boton-carta" onclick="abrirCarta()">💌 Para mi amor...</button>
+
+<footer>Con todo mi amor 💘</footer>
+
+<!-- 📜 CARTA -->
+<div class="modal" id="modal">
+    <div class="carta">
+        <h2>Para la Sra Arancibia ❤️</h2>
+        <p>
+Hola amorchitoo!! Mi reinaa preciosa que amo tanto 😍 Mi super modelo ultra mega sexy que deseo con todo mi corazón 🤤 esa chica que me saca la respiración 😊
+<br><br> 
+Hoy, 17 de Marzo del 2026 cumplimos 1 año de esta hermosa relación. Gracias por tu paciencia, por tu amor, por bancarme como soy. A tu lado aprendí lo que es amar de verdad 💘. Siento que los 2 nos hemos ayudado a sobrellevar todos los malos momentos que nos han pasado, como cuando me paso lo de la cara, a pesar de que estaba aterrado y tenia mucho miedo, en vos encontre la paz que necesitaba en ese momento, al igual que lo habras sentido vos cuando el mundo se te venia abajo. Sé que tengo mis defectos, te pido perdón y a la vez gracias, gracias porque a pesar de eso me queres, me aceptas como soy y me dejar ser yo mismo. 
+<br><br>
+Ya son 365 días = 8760 horas = 525600 minutos de puro amor. Te volviste mi compañera, mi apoyo, mi lugar seguro y la persona que elijo todos los días 💍. No me imagino una vida sin vos, literal no sabria que hacer, me sentiria perdido sin mi otra mitad, no seremos la pareja perfecta, pero asi nos quiero para toda la vida, con nuestros chistes, nuestros momentos donde nos comportamos como niños, hasta donde nos tiramos pedos y nos reimos jjaja. 
+<br><br> 
+Asi nos quiero, siempre acompañandonos y no dejando que nada ni nadie nos separe... Quiero que nunca dudes de lo que valés, porque sos una mujer increíble, hermosa por dentro y por fuera, con un corazón gigante. Prometo cuidarte, respetarte, acompañarte y amarte todos los días de mi vida. Prometo elegirte siempre, incluso en los días difíciles, incluso cuando todo se complique. Te elijo hoy, te elijo mañana y te voy a elegir para siempre ❤️ 
+<br><br> 
+NUNCA te dejaría de elegir, NUNCA te traicionaría, NUNCA te lastimaría, NUNCA dejaré de amarte. SIEMPRE voy a estar a tu lado cuidándote y amándote 👸. 
+<br><br> 
+GRACIAS POR ESTOS 365 DÍAS TAN LINDOS. TE AMO DEMASIADO MI NENA 😍😍😍
+        </p>
+
+        <div class="cerrar">
+            <button onclick="cerrarCarta()">Cerrar 💕</button>
+        </div>
+    </div>
+</div>
+
+<script>
+/* 🎠 Carrusel ilimitado */
+const fotos = document.querySelectorAll(".carrusel img");
+let indice = 0;
+
+function mostrarFoto(n) {
+    fotos.forEach((img, i) => {
+        img.style.opacity = i === n ? "1" : "0";
+    });
+}
+
+if (fotos.length > 0) {
+    mostrarFoto(indice);
+    setInterval(() => {
+        indice = (indice + 1) % fotos.length;
+        mostrarFoto(indice);
+    }, 4000);
+}
+
+/* 📜 Carta */
+function abrirCarta() {
+    document.getElementById("modal").classList.add("activo");
+}
+
+function cerrarCarta() {
+    document.getElementById("modal").classList.remove("activo");
+}
+
+/* ❤️ Corazones */
+function crearCorazon() {
+    const c = document.createElement("div");
+    c.className = "heart";
+    c.innerHTML = "❤️";
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.fontSize = (15 + Math.random() * 25) + "px";
+    c.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 9000);
+}
+setInterval(crearCorazon, 350);
+</script>
+
+</body>
+</html>
